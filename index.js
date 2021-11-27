@@ -1,7 +1,7 @@
 const number = document.querySelector('.time');
 let startingMinutes;
 for (let i = 0; i < 1; i++) {
-    const userNumber = +prompt('Введите время в минутaх от 1 до 60, чтоб запустить таймер');
+    const userNumber = +prompt('Введите время в минутaх от 1 до 60, чтоб запустить таймер').trim();
 
     if(isNaN(userNumber)) {
         alert('Введите число');
@@ -31,8 +31,14 @@ function updateTime () {
     number.innerHTML = `${minutes}: ${seconds}`;
     time--;
     if(time < 0) {
-        number.classList.add('hide')
+        number.style.fontSize = '30px';
+        number.style.fontWeight = '900';
+        number.style.marginBottom = '30px'
+        number.textContent = 'Время истекло'
         clearInterval(timerId);
+        setTimeout(() => {
+            number.classList.add('hide')
+        }, 2000)
     }
 }
 
