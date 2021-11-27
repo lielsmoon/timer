@@ -1,0 +1,25 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.timer {
+    
+    text-align: center;
+}
+.time {
+    margin-bottom: 7px;
+    font-family: 'Shippori Antique', sans-serif;
+    font-size: 80px;
+}
+
+.input {
+    margin-bottom: 7px;
+}
+
+.hide {
+   display: none;
+}
